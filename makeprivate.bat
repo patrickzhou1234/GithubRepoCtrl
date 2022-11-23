@@ -1,0 +1,1 @@
+gh repo list patrickzhou1234 --json nameWithOwner,isPrivate     --jq 'map(select(.isPrivate | not)) | .[].nameWithOwner'     | while IFS= read -r repo; do         gh repo edit "$repo" --visibility private;     done
