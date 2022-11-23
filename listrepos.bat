@@ -1,0 +1,1 @@
+curl   -H "Accept: application/vnd.github+json"   -H "Authorization: Bearer token"   https://api.github.com/user/repos | jq --raw-output '.[] .name' |  xargs -I % echo %
